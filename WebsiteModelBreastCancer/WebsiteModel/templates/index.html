@@ -1,0 +1,38 @@
+<!-- by Vincent Claes cteq.eu -->
+</html>
+<head>
+<title>Cement strength prediction</title>
+</head>
+	<body>
+	<h1>Breast Cancer</h1>
+		{% block content %}{% endblock %}
+		<form action="/start" method="post" novalidate>
+			{{ form.hidden_tag() }}
+			<p>
+				{{ form.points_mean.label }}<br>
+				{{ form.points_mean(size=32) }}
+			</p>
+			<p>
+				{{ form.dimension_mean.label }}<br>
+				{{ form.dimension_mean(size=32) }}
+			</p>
+			<p>
+				{{ form.smoothness_se.label}}<br>
+				{{ form.smoothness_se(size=32)}}
+			</p>
+			<p>
+				{{ form.symmetry_se.label}}<br>
+				{{ form.symmetry_se(size=32)}}
+			</p>
+			<p>
+				{{ form.radius_worst.label}}<br>
+				{{ form.radius_worst(size=32)}}
+			</p>
+			<p>
+				{{ form.perimeter_worst.label }}<br>
+				{{ form.perimeter_worst(size=32) }}
+			</p>
+			<p>{{ form.submit() }}</p>
+		</form><br>
+	</body>
+</html>
